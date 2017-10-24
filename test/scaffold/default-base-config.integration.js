@@ -11,11 +11,11 @@ describe('#defaultBaseConfig', function() {
     var info = defaultBaseConfig();
     info.path.should.equal(cwd);
     info.config.network.should.equal('livenet');
-    info.config.port.should.equal(24156);
+    info.config.port.should.equal(3001);
     info.config.services.should.deep.equal(['bitcoind', 'web']);
     var bitcoind = info.config.servicesConfig.bitcoind;
-    bitcoind.spawn.datadir.should.equal(home + '/.monacoCoinCore');
-    bitcoind.spawn.exec.should.equal(path.resolve(__dirname, process.env.HOME, './.monacoCoinCore/monacoCoinCored'));
+    bitcoind.spawn.datadir.should.equal(home + '/.monacocoin');
+    bitcoind.spawn.exec.should.equal(path.resolve(__dirname, process.env.HOME, './.monacocoin/monacocoind'));
   });
   it('be able to specify a network', function() {
     var info = defaultBaseConfig({network: 'testnet'});

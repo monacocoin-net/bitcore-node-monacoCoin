@@ -1,17 +1,17 @@
-Bitcore Node monacoCoin
+Bitcore Node monacocoin
 ============
 
-A monacoCoin full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. At the minimum a node has an interface to [monacoCoin Core v0.12.1.x](https://github.com/monacoCoinpay/monacoCoin/tree/v0.12.1.x) for more advanced address queries. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
+A monacocoin full node for building applications and services with Node.js. A node is extensible and can be configured to run additional services. At the minimum a node has an interface to [monacocoin Core v0.12.1.x](https://github.com/monacocoinpay/monacocoin/tree/v0.12.1.x) for more advanced address queries. Additional services can be enabled to make a node more useful such as exposing new APIs, running a block explorer and wallet service.
 
 ## Install
 
 ```bash
-npm install -g bitcore-node-monacoCoin
+npm install -g bitcore-node-monacocoin
 ```
 
 ## Prerequisites
 
-- monacoCoin Core (v0.12.1.x) with support for additional indexing *(see above)*
+- monacocoin Core (v0.12.1.x) with support for additional indexing *(see above)*
 - Node.js v0.10, v0.12, v4 or v5
 - ZeroMQ *(libzmq3-dev for Ubuntu/Debian or zeromq on OSX)*
 - ~20GB of disk storage
@@ -22,14 +22,16 @@ npm install -g bitcore-node-monacoCoin
 Bitcore includes a Command Line Interface (CLI) for managing, configuring and interfacing with your Bitcore Node.
 
 ```bash
-bitcore-node-monacoCoin create -d <monacoCoin-data-dir> mynode
+bitcore-node-monacocoin create -d <monacocoin-data-dir> mynode
 cd mynode
-bitcore-node-monacoCoin install <service>
-bitcore-node-monacoCoin install https://github.com/yourname/helloworld
-bitcore-node-monacoCoin start
+bitcore-node-monacocoin install <service>
+bitcore-node-monacocoin install https://github.com/yourname/helloworld
+bitcore-node-monacocoin start
 ```
 
 This will create a directory with configuration files for your node and install the necessary dependencies.
+
+Please note that [monacocoin Core v0.12.1.x](https://github.com/monacocoinpay/monacocoin/tree/v0.12.1.x) will be downloaded automatically. Once completed the monacocoind binary should be placed into the &lt;monacocoin-data-dir&gt; folder specified during node creation.
 
 For more information about (and developing) services, please see the [Service Documentation](docs/services.md).
 
@@ -37,9 +39,9 @@ For more information about (and developing) services, please see the [Service Do
 
 There are several add-on services available to extend the functionality of Bitcore:
 
-- [Insight API](https://github.com/monacocoin-net/insight-api-monacoCoin/tree/master)
-- [Insight UI](https://github.com/monacocoin-net/insight-ui-monacoCoin/tree/master)
-- [Bitcore Wallet Service](https://github.com/monacocoin-net/bitcore-wallet-service/tree/master)
+- [Insight API](https://github.com/monacocoinpay/insight-api-monacocoin/tree/master)
+- [Insight UI](https://github.com/monacocoinpay/insight-ui-monacocoin/tree/master)
+- [Bitcore Wallet Service](https://github.com/monacocoinpay/bitcore-wallet-service/tree/master)
 
 ## Documentation
 
@@ -58,7 +60,7 @@ Please send pull requests for bug fixes, code optimization, and ideas for improv
 
 ## License
 
-Code released under [the MIT license](https://github.com/bitpay/bitcore-node-monacoCoin/blob/master/LICENSE).
+Code released under [the MIT license](https://github.com/bitpay/bitcore-node-monacocoin/blob/master/LICENSE).
 
 Copyright 2013-2015 BitPay, Inc.
 

@@ -25,7 +25,7 @@ describe('#add', function() {
         throw err;
       }
       fs.writeFile(
-        testDir + '/s0/s1/bitcore-node-monacoCoin.json',
+        testDir + '/s0/s1/bitcore-node-monacocoin.json',
         JSON.stringify(startConfig),
         function(err) {
           if (err) {
@@ -90,12 +90,12 @@ describe('#add', function() {
       });
     });
 
-    it('will update bitcore-node-monacoCoin.json services', function(done) {
+    it('will update bitcore-node-monacocoin.json services', function(done) {
       var callCount = 0;
       var oldPackage = {
         dependencies: {
-          'bitcore-lib-monacoCoin': '^v0.13.17',
-          'bitcore-node-monacoCoin': '^v0.2.0'
+          'bitcore-lib-monacocoin': '^v0.13.17',
+          'bitcore-node-monacocoin': '^v0.2.0'
         }
       };
       var spawn = sinon.stub().returns({
@@ -130,7 +130,7 @@ describe('#add', function() {
         services: ['a', 'b', 'c']
       }, function(err) {
         should.not.exist(err);
-        var configPath = path.resolve(testDir, 's0/s1/bitcore-node-monacoCoin.json');
+        var configPath = path.resolve(testDir, 's0/s1/bitcore-node-monacocoin.json');
         var config = JSON.parse(fs.readFileSync(configPath));
         config.services.should.deep.equal(['a','b','c']);
         done();

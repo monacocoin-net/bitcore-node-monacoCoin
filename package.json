@@ -1,18 +1,15 @@
 {
-  "name": "bitcore-node-monacoCoin",
-  "description": "Full node with extended capabilities using Bitcore and monacoCoin Core",
+  "name": "bitcore-node-monacocoin",
+  "description": "Full node with extended capabilities using Bitcore and monacocoin Core",
   "author": "BitPay <dev@bitpay.com>",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "main": "./index.js",
-  "repository": "git://github.com/monacoCoin-net/bitcore-node-monacoCoin.git",
-  "homepage": "https://github.com/monacoCoin-net/bitcore-node-monacoCoin",
+  "repository": "git://github.com/monacocoin-net/bitcore-node-monacocoin.git",
+  "homepage": "https://github.com/monacocoin-net/bitcore-node-monacocoin",
   "bugs": {
-    "url": "https://github.com/monacoCoin-net/bitcore-node-monacoCoin/issues"
+    "url": "https://github.com/monacocoin-net/bitcore-node-monacocoin/issues"
   },
   "contributors": [
-   {
-      "name": "Sebastien Icard"
-    },
     {
       "name": "Christopher Jeffrey"
     },
@@ -27,10 +24,14 @@
     {
       "name": "Patrick Nagurny",
       "email": "patrick@bitpay.com"
+    },
+    {
+      "name": "Sebastien Icard",
+      "email": "monacocoin@gmail.com"
     }
   ],
   "bin": {
-    "bitcore-node-monacoCoin": "./bin/bitcore-node-monacoCoin"
+    "bitcore-node-monacocoin": "./bin/bitcore-node-monacocoin"
   },
   "scripts": {
     "preinstall": "./scripts/download",
@@ -42,13 +43,13 @@
     "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "tags": [
-    "monacoCoin",
-    "monacoCoind"
+    "monacocoin",
+    "monacocoind"
   ],
   "dependencies": {
     "async": "^1.3.0",
-    "bitcoind-rpc-monacoCoin": "^0.7.1",
-    "bitcore-lib-monacoCoin": "^0.13.20",
+    "bitcoind-rpc-monacocoin": "^1.0.0",
+    "bitcore-lib-monacocoin": "^0.15.1",
     "body-parser": "^1.13.3",
     "colors": "^1.1.2",
     "commander": "^2.8.1",
@@ -70,7 +71,7 @@
   },
   "devDependencies": {
     "benchmark": "1.0.0",
-    "bitcore-p2p-monacoCoin": "^1.1.2",
+    "bitcore-p2p-monacocoin": "^1.1.5",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",

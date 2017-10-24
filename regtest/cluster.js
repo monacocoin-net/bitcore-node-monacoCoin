@@ -4,9 +4,9 @@ var path = require('path');
 var async = require('async');
 var spawn = require('child_process').spawn;
 
-var BitcoinRPC = require('bitcoind-rpc-monacoCoin');
+var BitcoinRPC = require('bitcoind-rpc-monacocoin');
 var rimraf = require('rimraf');
-var bitcore = require('bitcore-lib-monacoCoin');
+var bitcore = require('bitcore-lib-monacocoin');
 var chai = require('chai');
 var should = chai.should();
 
@@ -19,11 +19,11 @@ var BitcoinService = index.services.Bitcoin;
 describe('Bitcoin Cluster', function() {
   var node;
   var daemons = [];
-  var execPath = path.resolve(__dirname, process.env.HOME, './.bitcore/data/monacoCoind')
+  var execPath = path.resolve(__dirname, process.env.HOME, './.bitcore/data/monacocoind')
   var nodesConf = [
     {
       datadir: path.resolve(__dirname, './data/node1'),
-      conf: path.resolve(__dirname, './data/node1/monacoCoin.conf'),
+      conf: path.resolve(__dirname, './data/node1/monacocoin.conf'),
       rpcuser: 'bitcoin',
       rpcpassword: 'local321',
       rpcport: 30521,
@@ -32,7 +32,7 @@ describe('Bitcoin Cluster', function() {
     },
     {
       datadir: path.resolve(__dirname, './data/node2'),
-      conf: path.resolve(__dirname, './data/node2/monacoCoin.conf'),
+      conf: path.resolve(__dirname, './data/node2/monacocoin.conf'),
       rpcuser: 'bitcoin',
       rpcpassword: 'local321',
       rpcport: 30522,
@@ -41,7 +41,7 @@ describe('Bitcoin Cluster', function() {
     },
     {
       datadir: path.resolve(__dirname, './data/node3'),
-      conf: path.resolve(__dirname, './data/node3/monacoCoin.conf'),
+      conf: path.resolve(__dirname, './data/node3/monacocoin.conf'),
       rpcuser: 'bitcoin',
       rpcpassword: 'local321',
       rpcport: 30523,
@@ -51,7 +51,7 @@ describe('Bitcoin Cluster', function() {
   ];
 
   before(function(done) {
-    log.info('Starting 3 monacoCoind daemons');
+    log.info('Starting 3 monacocoind daemons');
     this.timeout(200000);
     async.each(nodesConf, function(nodeConf, next) {
       var opts = [

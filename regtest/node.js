@@ -9,13 +9,13 @@ var log = index.log;
 log.debug = function() {};
 
 var chai = require('chai');
-var bitcore = require('bitcore-lib-monacoCoin');
+var bitcore = require('bitcore-lib-monacocoin');
 var rimraf = require('rimraf');
 var node;
 
 var should = chai.should();
 
-var BitcoinRPC = require('bitcoind-rpc-monacoCoin');
+var BitcoinRPC = require('bitcoind-rpc-monacocoin');
 var index = require('..');
 var Transaction = bitcore.Transaction;
 var BitcoreNode = index.Node;
@@ -53,7 +53,7 @@ describe('Node Functionality', function() {
             config: {
               spawn: {
                 datadir: datadir,
-                exec: path.resolve(__dirname, process.env.HOME, './.bitcore/data/monacoCoind')
+                exec: path.resolve(__dirname, process.env.HOME, './.bitcore/data/monacocoind')
               }
             }
           }

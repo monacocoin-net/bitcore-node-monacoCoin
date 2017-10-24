@@ -64,7 +64,7 @@ describe('#create', function() {
         throw err;
       }
 
-      var configPath = testDir + '/mynode/bitcore-node-monacoCoin.json';
+      var configPath = testDir + '/mynode/bitcore-node-monacocoin.json';
       var packagePath = testDir + '/mynode/package.json';
 
       should.equal(fs.existsSync(configPath), true);
