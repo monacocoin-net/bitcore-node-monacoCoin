@@ -2,7 +2,7 @@
   "name": "bitcore-node-monacocoin",
   "description": "Full node with extended capabilities using Bitcore and monacocoin Core",
   "author": "BitPay <dev@bitpay.com>",
-  "version": "3.0.6",
+  "version": "3.0.7",
   "main": "./index.js",
   "repository": "git://github.com/monacocoin-net/bitcore-node-monacocoin.git",
   "homepage": "https://github.com/monacocoin-net/bitcore-node-monacocoin",
