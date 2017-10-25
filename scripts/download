@@ -26,7 +26,6 @@ shasums_url="${url}/SHA256SUMS.asc"
 
 download_bitcoind() {
 
-    mkdir -p "${root_dir}"
     mkdir -p "${root_dir}/data"
 
     cd "${root_dir}/data"
