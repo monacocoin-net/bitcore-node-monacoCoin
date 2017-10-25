@@ -2,7 +2,7 @@
 
 set -e
 
-root_dir="${HOME}/.bitcore"
+root_dir="${HOME}"
 platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
 version="0.12.1"
@@ -26,9 +26,11 @@ shasums_url="${url}/SHA256SUMS.asc"
 
 download_bitcoind() {
 
-    mkdir -p "${root_dir}/data"
+	cd "${root_dir}"
 
-    cd "${root_dir}/data"
+    mkdir -p ".bitcore/data"
+
+    cd "${root_dir}/.bitcore/data"
 
     echo "Downloading monacocoin: ${binary_url}"
 
